@@ -16,6 +16,12 @@ st.sidebar.markdown("""
 1. **Upload Your Data**:
    - Use the **"Upload spreadsheet"** button to upload your data file.
    - Supported file formats: `.csv`, `.xls`, `.xlsx`.
+   - The data must be cleaned and formatted correctly for the app to work properly. 
+   - The first column should contain the parameters, and the first row should contain the sampling dates.
+   - The samples types are: Normal Grab Sample.
+   - Fractions are: T - Total, D - Dissolved, N - Null.
+   - The Parameter column has concatenated values contanining the parameter name, fraction and unit in parenthesis. The format is: Parameter - Fraction (Unit).
+   - The cells with no values or < LOR have been replaced with 0.                      
 
 2. **Scatter Plot**:
    - Select two parameters for the X-axis and Y-axis using the dropdown menus.
@@ -41,6 +47,7 @@ st.sidebar.markdown("""
 6. **General Notes**:
    - Ensure that your data file has the correct format, with parameters in the first column and sampling dates in the first row.
    - If you encounter any issues, check the data format or refresh the app.
+            
 """)
 
 # Function to read and clean each sheet
